@@ -14,8 +14,11 @@ df <- read.csv(unz( './sesnsp/data/data_original/Municipal-Delitos-2015-2022_mar
 # Limpiar
 
 df <- clean_names(df)
-names(df)
+#names(df)
  
+
+# Crear primeros agregados 
+
 df1 <- df %>% rename( anio = ano, 
                    cve_mpio = cve_municipio) %>%
   mutate( anio = as.character(anio),
@@ -27,6 +30,3 @@ df1 <- df %>% rename( anio = ano,
     summarise( sum(Total)) 
 df1
 
-# write.csv(s, 'femi_mpio.csv')
-  
-  

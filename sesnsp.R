@@ -3,12 +3,12 @@ library(janitor)
 
 #
 
-setwd("E:/")
-
 # Lectura de archivo comprimido
 
-df <- read.csv(unz( './sesnsp/data/data_original/Municipal-Delitos-2015-2022_mar2022.zip',
-              'Municipal-Delitos-2015-2022_mar2022/Municipal-Delitos-2015-2022_mar2022.csv'), header = T)
+df <- read_csv( unz( 'analisis_datos/sesnsp_monitoreo/data/data_original/Municipal-Delitos-2015-2022_jun2022.zip',
+              'Municipal-Delitos-2015-2022_jun2022/Municipal-Delitos-2015-2022_jun2022.csv'), 
+              locale = readr::locale(encoding = "Latin1"))
+
 
 # Limpiar
 
